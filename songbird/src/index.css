@@ -1,0 +1,213 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  background-color: #222;
+}
+
+header {
+  margin-top: 20px;
+}
+
+.navbar {
+  border-radius: 10px;
+}
+
+.navbar-brand {
+  font-family: "Leckerli One", cursive;
+}
+
+.navbar-brand span {
+  color: #00bc8c;
+}
+
+.score {
+  margin-right: 20px;
+}
+
+#root .pagination {
+  background-color: #087257;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  border-radius: 5px;
+}
+
+.page-item {
+  flex: auto;
+  text-align: center;
+}
+
+ .active-level {
+  background-color:  #00bc8c;
+  box-sizing: border-box;
+} 
+
+.page-item:not(:last-child) {
+  border-right: 1px solid rgb(242, 250, 242);
+}
+
+.page-item {
+  padding: 10px 20px;
+}
+
+.question-block {
+  display: flex;
+  background-color: #303030;
+  height: 220px;
+  margin: 25px 0;
+  border-radius: 10px;
+}
+.question-img {
+  width: 200px;
+  margin: 10px 20px;
+}
+.question-img img {
+  width: inherit;
+  border-radius: 20px;
+}
+.bird-name {
+  margin-top: 1rem;
+  font-size: 24px;
+}
+hr.solid {
+  border-top: 2px solid #bbb;
+}
+.audio.green-audio-player {
+  width: 400px;
+  min-width: 300px;
+  height: 56px;
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.07);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 24px;
+  border-radius: 4px;
+  user-select: none;
+  border-radius: 30px;
+  background-color: #fff;
+}
+.audio.green-audio-player .play-pause-btn {
+  cursor: pointer;
+  width: 50px;
+  border-radius: 50%;
+  height: 50px;
+  background-color: #00bc8c;
+  padding: 12px 19px;
+}
+
+.audio.green-audio-player .spinner {
+  width: 18px;
+  height: 18px;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/355309/loading.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: spin 0.4s linear infinite;
+}
+.audio.green-audio-player .slider {
+  flex-grow: 1;
+  background-color: #d8d8d8;
+  cursor: pointer;
+  position: relative;
+}
+.audio.green-audio-player .slider .progress {
+  background-color: #44bfa3;
+  border-radius: inherit;
+  position: absolute;
+  pointer-events: none;
+}
+.audio.green-audio-player .slider .progress .pin {
+  height: 16px;
+  width: 16px;
+  border-radius: 8px;
+  background-color: #44bfa3;
+  position: absolute;
+  pointer-events: all;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.32);
+}
+.audio.green-audio-player .controls {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  color: #55606e;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+.audio.green-audio-player .controls .slider {
+  margin-left: 16px;
+  margin-right: 16px;
+  border-radius: 2px;
+  height: 4px;
+}
+.audio.green-audio-player .controls .slider .progress {
+  width: 0;
+  height: 100%;
+}
+.audio.green-audio-player .controls .slider .progress .pin {
+  right: -8px;
+  top: -6px;
+}
+.audio.green-audio-player .controls span {
+  cursor: default;
+}
+
+svg,
+img {
+  display: block;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(1turn);
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.bird-img {
+  max-width: 200px;
+}
+.bird-img img {
+  width: inherit;
+}
+
+.bird-info {
+  background-color: #303030;
+  border-radius: 10px;
+  border:1px solid #555;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #55606e;
+  margin-right: 20px;
+}
+
+.list-group .list-group-item.active {
+  display: flex;
+  justify-content: flex-start;
+  background-color: #303030;
+  border-color: #555;
+  align-items: center;
+}
+
+.list-group-item.active:hover {
+  background-color: #444;
+}
+
+.bird-text .audio.green-audio-player {
+  width: 100%;
+}
