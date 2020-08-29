@@ -226,6 +226,7 @@ hr.solid {
   border-radius: 50%;
   margin-top: 20px;
   max-width: 500px;
+  margin-bottom: 20px;
 }
 
 .final-caption {
@@ -294,7 +295,7 @@ hr.solid {
   .player-block .rhap_horizontal-reverse {
     flex-direction: column;
   }
-  .rhap_main .rhap_controls-section {
+  .rhap_container .rhap_horizontal-reverse .rhap_controls-section {
     margin-right: 0px;
     margin: 0 auto;
   }
@@ -318,7 +319,9 @@ hr.solid {
   .final-caption {
     font-size: 2rem;
   }
-
+  .final-img {
+    max-width: 280px;
+  }
   .btn-success {
     margin-top: 4rem;
   }

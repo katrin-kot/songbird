@@ -12,10 +12,10 @@ class QuestionBlock extends React.Component {
     if (error) return <div>{`Error: ${error.message}`}</div>;
     return (
       <div className="row question-block">
-        <div className="col-12 col-sm-3 bird-img">
+        <div className="col-12 col-md-3 bird-img">
           <img src={process.env.PUBLIC_URL + imgUrl} alt="" />
         </div>
-        <div className="col-12 col-sm-9 player-block">
+        <div className="col-12 col-md-9 player-block">
           <p className="bird-name">{birdName}</p>
           <hr className="solid"></hr>
           <AudioPlayer

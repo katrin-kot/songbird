@@ -4,7 +4,7 @@ function GameOver(props) {
   if (props.score === 30) {
     return (
       <div className="row final-window">
-        <h1>Поздравляем!</h1>
+        <h1 className="final-caption">Поздравляем!</h1>
         <h4>Ты стал обладателем хрустальной совы!</h4>
         <img
           className="final-img"
