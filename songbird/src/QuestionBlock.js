@@ -1,45 +1,47 @@
 import React from "react";
-import AudioPlayer from "./AudioPlayer";
+import { StoreContext } from "./StoreContext";
+import "react-h5-audio-player/lib/styles.css";
+import AudioPlayer, { RHAP_UI } from "react-h5-audio-player";
 
 class QuestionBlock extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      imgUrl: "/assets/default-bird.png",
-      birdName: "*****",
-      api: "b1ae646e2c5aa006a9ed7c9a5f5658d9",
-    };
-  }
-
-  componentDidMount() {
-    fetch(
-      `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${this.state.api}&tag_mode=all&extras=url_m&format=json&nojsoncallback&tags=Botaurus+stellaris`
-    )
-      .then((response) => response.json())
-      .then((result) =>
-        this.setState({ imgUrl:result.photos.photo[0].url_m, isFetching: false })
-      )
-      .catch((e) => {
-        console.log(e);
-        this.setState({
-          isFetching: false,
-          error: e,
-        });
-      });
-  }
+  static contextType = StoreContext;
 
   render() {
+    const { imgUrl, birdName, voice, player, isFetching, error } = this.context;
+    if (isFetching) return <div>...Loading</div>;
+    if (error) return <div>{`Error: ${error.message}`}</div>;
     return (
-      <div className="question-block">
-        <div className="question-img">
-          <img src={process.env.PUBLIC_URL + this.state.imgUrl} />
+      <div className="row question-block">
+        <div className="col-12 col-sm-3 bird-img">
+          <img src={process.env.PUBLIC_URL + imgUrl} alt="" />
         </div>
-        <div className="player-block">
-        <p className="bird-name">{this.state.birdName}</p>
-        <hr className="solid"></hr>
-        <AudioPlayer />
-      </div>
+        <div className="col-12 col-sm-9 player-block">
+          <p className="bird-name">{birdName}</p>
+          <hr className="solid"></hr>
+          <AudioPlayer
+            src={voice}
+            ref={player}
+            autoPlayAfterSrcChange={false}
+            layout="horizontal-reverse"
+            showJumpControls={false}
+            customProgressBarSection={[
+              RHAP_UI.CURRENT_TIME,
+              RHAP_UI.PROGRESS_BAR,
+              RHAP_UI.DURATION,
+              RHAP_UI.VOLUME,
+            ]}
+            customVolumeControls={[]}
+            customAdditionalControls={[]}
+            customIcons={{
+              play: (
+                <img src="/assets/icons8-circled-play-40.png" alt="play-btn" />
+              ),
+              pause: (
+                <img src="/assets/icons8-pause-button-40.png" alt="pause-btn" />
+              ),
+            }}
+          />
+        </div>
       </div>
     );
   }

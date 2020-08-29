@@ -20,16 +20,14 @@ class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      score: 0,
       levels: [
         "Разминка",
-        "Воробьиные",
-        "Лесные птицы",
-        "Певчие птицы",
+        "Зимующие птицы",
+        "Перелётные птицы",
+        "Водоплавующие птицы",
+        "Экзотические птицы",
         "Хищные птицы",
-        "Морские птицы",
       ],
-      activeLevel: 0,
     };
   }
 
@@ -40,9 +38,9 @@ class Header extends React.Component {
           <a className="navbar-brand" href="#">
             Song<span>bird</span>
           </a>
-          <p className="score">Score:{this.state.score}</p>
+          <h5 className="score">Score: {this.props.score}</h5>
         </nav>
-        <LevelList levels={this.state.levels} level ={this.state.activeLevel} />
+        <LevelList levels={this.state.levels} level={this.props.level} />
       </header>
     );
   }
