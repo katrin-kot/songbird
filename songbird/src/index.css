@@ -1,0 +1,328 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  background-color: #222;
+}
+
+header {
+  margin-top: 20px;
+}
+
+.navbar {
+  border-radius: 0.25rem;
+  padding: 0 40px;
+}
+
+@font-face {
+  font-family: "Pinyon Script";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Pinyon Script"), local("PinyonScript"),
+    url(https://fonts.gstatic.com/s/pinyonscript/v10/6xKpdSJbL9-e9LuoeQiDRQR8WOXaOg.woff2)
+      format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+.navbar-brand {
+  font-family: "Pinyon Script", cursive;
+  font-size: 60px;
+}
+
+.navbar-brand span {
+  color: #00bc8c;
+}
+
+.score {
+  margin-right: 20px;
+}
+
+#root .pagination {
+  background-color: #087257;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  border-radius: 0.25rem;
+}
+
+.page-item {
+  flex: auto;
+  text-align: center;
+}
+
+.active-level {
+  background-color: #00bc8c;
+  box-sizing: border-box;
+}
+
+.page-item:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.page-item {
+  padding: 10px 20px;
+}
+
+.question-block {
+  padding: 1rem;
+  background-color: #303030;
+  margin: 25px 0;
+  border-radius: 0.25rem;
+}
+
+.player-block {
+  padding: 0 40px;
+}
+
+.bird-name {
+  margin-top: 1rem;
+  font-size: 24px;
+}
+
+hr.solid {
+  border-top: 1px solid #bbb;
+}
+
+.react-audio-player {
+  width: 100%;
+  border: none;
+  border-color: #303030;
+}
+
+.player-block .rhap_container {
+  background-color: #303030;
+  box-shadow: none;
+  padding: 0px;
+}
+
+.bird-text .rhap_container {
+  background-color: #303030;
+  box-shadow: none;
+  padding: 0px;
+}
+
+.rhap_main .rhap_progress-section .rhap_time {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  font-size: 14px;
+}
+
+.rhap_progress-bar .rhap_download-progress {
+  background-color: #888;
+}
+
+.rhap_controls-section .rhap_volume-controls {
+  justify-content: flex-start;
+}
+.rhap_main .rhap_controls-section {
+  flex: none;
+}
+
+.rhap_play-pause-button img {
+  vertical-align: top;
+}
+
+.rhap_progress-bar .rhap_progress-filled {
+  background-color: #44bfa3;
+}
+
+.rhap_controls-section .rhap_additional-controls {
+  flex: none;
+}
+
+.bird-description {
+  margin-top: 20px;
+}
+
+.answer-block {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.bird-img {
+  width: 200px;
+  height: 155px;
+  margin-top: 1rem;
+  padding: 0;
+  text-align: center;
+  border-radius: 0.25rem;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.bird-img img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+  border-radius: 0.25rem;
+}
+
+.bird-info {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 2 1 50%;
+  background-color: #303030;
+  border-radius: 0.25rem;
+  border: 1px solid #555;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #55606e;
+  margin-right: 20px;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: #00bc8c;
+}
+
+.list-group {
+  padding-right: 40px;
+  flex: 1 2 50%;
+}
+
+.list-group .list-group-item.active {
+  display: flex;
+  justify-content: flex-start;
+  background-color: #303030;
+  border-color: #555;
+  align-items: center;
+}
+
+.list-group-item.active:hover {
+  background-color: #444;
+  cursor: pointer;
+}
+
+.bird-text .audio.green-audio-player {
+  width: 100%;
+}
+
+.btn-secondary {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.btn-secondary:not(:disabled) {
+  background-color: #00bc8c;
+}
+
+.final-window {
+  flex-direction: column;
+  align-items: center;
+}
+
+.final-img {
+  border-radius: 50%;
+  margin-top: 20px;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+.final-caption {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-size: 6rem;
+  font-weight: 400;
+}
+
+.btn-success {
+  width: 100%;
+  margin-top: 10rem;
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 100%;
+  }
+  .page-item:not(:last-child) {
+    border-right: none;
+  }
+  .question-img {
+    padding: 10px 20px;
+  }
+  .btn-secondary {
+    max-width: 80%;
+    margin: 20px auto;
+  }
+  .btn-success {
+    max-width: 80%;
+  }
+}
+@media (max-width: 768px) {
+  .bird-info {
+    flex-direction: column;
+    align-items: center;
+  }
+  .bird-img,
+  .bird-text {
+    max-width: 100%;
+  }
+}
+@media (max-width: 670px) {
+  .pagination {
+    flex-direction: column;
+  }
+  .page-item:first-child {
+    border-top-right-radius: 5px;
+  }
+
+  .final-window {
+    padding: 20px;
+  }
+  .final-caption {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .question-block .bird-img {
+    width: inherit;
+  }
+  .player-block {
+    padding: 0px;
+  }
+  .player-block .rhap_horizontal-reverse {
+    flex-direction: column;
+  }
+  .rhap_container .rhap_horizontal-reverse .rhap_controls-section {
+    margin-right: 0px;
+    margin: 0 auto;
+  }
+  .list-group {
+    max-width: 90%;
+    padding-right: 0px;
+    margin-bottom: 20px;
+  }
+  .answer-block {
+    align-items: center;
+    flex-direction: column;
+  }
+  .bird-text {
+    max-width: 100%;
+  }
+  .bird-info {
+    align-items: center;
+    max-width: 90%;
+    padding: 0px;
+  }
+  .final-caption {
+    font-size: 2rem;
+  }
+  .final-img {
+    max-width: 280px;
+  }
+  .btn-success {
+    margin-top: 4rem;
+  }
+}
